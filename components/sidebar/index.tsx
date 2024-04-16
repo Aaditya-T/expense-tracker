@@ -121,7 +121,7 @@ export default function Sidebar() {
 							})}
 						</div>
 						<div className="flex flex-col items-center">
-							{settingsLinks.map((link) => {
+							{/* {settingsLinks.map((link) => {
 								return (
 									<SidebarLink
 										onClick={() => setShow(false)}
@@ -132,7 +132,7 @@ export default function Sidebar() {
 										<link.Icon className="text-white" />
 									</SidebarLink>
 								);
-							})}
+							})} */}
 							<button
 								className={`mt-2 flex h-[40px] w-full items-center justify-center rounded-lg p-2 text-base tracking-wide text-white hover:bg-[#27272a]`}
 								onClick={signOut}
