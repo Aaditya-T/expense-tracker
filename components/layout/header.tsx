@@ -52,10 +52,10 @@ export default function LayoutHeader({ title, showDatePicker = false }: { title:
 							<DatePicker />
 						</div>
 					) : null}
-					<Feedback
+					{/* <Feedback
 						showDatePicker={showDatePicker}
 						className="absolute right-[16px] top-[12px] sm:relative sm:right-0 sm:top-0"
-					/>
+					/> */}
 				</div>
 			</div>
 			<Separator />
