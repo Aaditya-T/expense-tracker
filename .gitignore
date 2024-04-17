@@ -40,3 +40,5 @@ next-env.d.ts
 .husky
 
 .env
+
+/prisma/migrations/*
