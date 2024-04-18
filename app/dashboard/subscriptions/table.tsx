@@ -23,8 +23,8 @@ export default function SubscriptionsTable() {
 	const user = useUser();
 
 	useEffect(() => {
-		const approachingRenewals: { renewal_date: any; name?: any; price?: any; date?: any; }[] = []
-		data.forEach((subscription: { renewal_date: any; name?: any; price?: any; date?: any; }) => {
+		const approachingRenewals: { renewal_date: any; name?: any; price?: any; date?: any; daysRemain:any; }[] = []
+		data.forEach((subscription: { renewal_date: any; name?: any; price?: any; date?: any;  }) => {
 		const today = new Date();
 		const renewalDate = new Date(subscription.renewal_date);
 		const notificationThreshold = 5; 
@@ -36,7 +36,8 @@ export default function SubscriptionsTable() {
 				name: subscription.name,
 				price: subscription.price,
 				renewal_date: subscription.renewal_date,
-				date: subscription.date
+				date: subscription.date,
+				daysRemain : daysUntilRenewal
 			});
 		}
 
