@@ -1,15 +1,15 @@
-<a href="https://expense.fyi">
-<p align="center"><img alt="Expense.fyi – An open source expense tracker application to track your incomes, investments, subscriptions, and expenses at ease." width="100" height="100" src="./public/icons/logo.svg"></p>
-  <h1 align="center">Expense.fyi</h1>
+
+<p align="center"><img alt="KharchKhabri – An open source expense tracker application to track your incomes, investments, subscriptions, and expenses at ease." width="100" height="100" src="./public/icons/logo.svg"></p>
+  <h1 align="center">KharchKhabri</h1>
 </a>
 
 <p align="center">
-  Expense.fyi is an open-source expense tracker application to effortlessly track and manage your expenses.
+  KharchKhabri is an open-source expense tracker application to effortlessly track and manage your expenses.
 </p>
 
 <p align="center">
-  <a href="https://github.com/gokulkrishh/expense.fyi/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/gokulkrishh/expense.fyi?label=license&logo=github&color=f80&logoColor=fff" alt="License" />
+  <a href="https://github.com/gokulkrishh/KharchKhabri/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/gokulkrishh/KharchKhabri?label=license&logo=github&color=f80&logoColor=fff" alt="License" />
   </a>
 </p>
 
@@ -24,7 +24,7 @@
 
 ## Introduction
 
-Expense.fyi is an open-source application to effortlessly track and manage your incomes, expenses, investments, and subscriptions.
+KharchKhabri is an open-source application to effortlessly track and manage your incomes, expenses, investments, and subscriptions.
 
 ## Tech Stack
 
@@ -37,7 +37,7 @@ Expense.fyi is an open-source application to effortlessly track and manage your 
 
 ## Implementation
 
-- Expense.fyi is built using [NextJs](https://nextjs.org) from scratch.
+- KharchKhabri is built using [NextJs](https://nextjs.org) from scratch.
 - [Postgresql](https://www.postgresql.org/) is used as the ORM for easily communicating with the database for storing user, subscription data, etc. You can refer to the Prisma schema [here](/prisma/schema.prisma).
 - [Supabase](https://supabase.com/) is an open-source Firebase alternative, the data is stored in the Postgres database (private data are encrypted) and uses a magic link for authentication provided by supabase.
 - [LemonSqueezy](https://lemonsqueezy.com/) is used as the payment system. Its implementation is super simple.
@@ -47,19 +47,19 @@ Expense.fyi is an open-source application to effortlessly track and manage your 
 | Path      | Production             | Local                     |
 | --------- | ---------------------- | ------------------------- |
 | Home      | /                      | /                         |
-| Signup    | app.expense.fyi/signup | app.localhost:3000/signup |
-| Signin    | app.expense.fyi/signin | app.localhost:3000/signin |
-| Dashboard | app.expense.fyi        | app.localhost:3000        |
+| Signup    | app.KharchKhabri/signup | app.localhost:3000/signup |
+| Signin    | app.KharchKhabri/signin | app.localhost:3000/signin |
+| Dashboard | app.KharchKhabri        | app.localhost:3000        |
 
 ## Contributions
 
 Here's how you can contribute:
 
-- [Open an issue](https://github.com/gokulkrishh/expense.fyi/issues) if you believe you've encountered a bug.
-- Make a [pull request](https://github.com/gokulkrishh/expense.fyi/pull) to add new features/make quality-of-life improvements/fix bugs.
+- [Open an issue](https://github.com/gokulkrishh/KharchKhabri/issues) if you believe you've encountered a bug.
+- Make a [pull request](https://github.com/gokulkrishh/KharchKhabri/pull) to add new features/make quality-of-life improvements/fix bugs.
 
-<a href="https://github.com/gokulkrishh/expense.fyi/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=gokulkrishh/expense.fyi" alt="contributors" />
+<a href="https://github.com/gokulkrishh/KharchKhabri/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=gokulkrishh/KharchKhabri" alt="contributors" />
 </a>
 
 ## Repo Activity
@@ -72,4 +72,4 @@ Here's how you can contribute:
 
 ## License
 
-Expense.fyi is an open source under the GNU Affero General Public License Version 3 (AGPLv3) or any later version. You can [find it here](https://github.com/gokulkrishh/expense.fyi/blob/main/LICENSE).
+KharchKhabri is an open source under the GNU Affero General Public License Version 3 (AGPLv3) or any later version. You can [find it here](https://github.com/gokulkrishh/KharchKhabri/blob/main/LICENSE).
