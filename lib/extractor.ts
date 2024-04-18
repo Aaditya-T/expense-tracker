@@ -8,6 +8,12 @@ export const sortByKey = (arr: Array<any>, key: string) => {
 	return arr.sort((a, b) => (a[key] < b[key] ? 1 : -1));
 };
 
+export const RenewSubscription = (arr: Array<any>, key: string)=> {
+    const today = new Date();
+    return arr.filter(subscription => subscription[key] > today);
+}
+
+
 export const extractExpenses = (data: Array<Object>, locale: string) => {
 	const groupByDate = data.reduce((acc: any, datum: any) => {
 		const date = formatDate({ date: datum.date, locale, dateStyle });
@@ -17,7 +23,7 @@ export const extractExpenses = (data: Array<Object>, locale: string) => {
 					[datum.category]: acc[date][datum.category]
 						? acc[date][datum.category] + Number(datum.price)
 						: Number(datum.price),
-			  }
+			}
 			: { date, [datum.category]: Number(datum.price) };
 
 		return acc;

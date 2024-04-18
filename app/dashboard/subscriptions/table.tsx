@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 import { toast } from 'sonner';
 
@@ -21,6 +21,29 @@ export default function SubscriptionsTable() {
 	const [selected, setSelected] = useState({});
 	const { data, loading, filter, mutate } = useData();
 	const user = useUser();
+
+	useEffect(() => {
+		const approachingRenewals: { renewal_date: any; name?: any; price?: any; date?: any; }[] = []
+		data.forEach((subscription: { renewal_date: any; name?: any; price?: any; date?: any; }) => {
+		const today = new Date();
+		const renewalDate = new Date(subscription.renewal_date);
+		const notificationThreshold = 5; 
+
+		const daysUntilRenewal = Math.floor((renewalDate.getTime() - today.getTime()) / (24 * 60 * 60 * 1000));
+		
+		if (daysUntilRenewal <= notificationThreshold && daysUntilRenewal > 0) {
+			approachingRenewals.push({
+				name: subscription.name,
+				price: subscription.price,
+				renewal_date: subscription.renewal_date,
+				date: subscription.date
+			});
+		}
+
+		localStorage.setItem('approachingRenewals', JSON.stringify(approachingRenewals));
+
+		});
+	}, [data]);
 
 	const onDelete = useCallback(
 		async (id: string) => {

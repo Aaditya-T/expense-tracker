@@ -15,12 +15,15 @@ import { formatCurrency, formatDate } from 'lib/formatter';
 import { SubscriptionsData } from './apis';
 
 export const columns: ColumnDef<SubscriptionsData>[] = [
+
+
+
 	{
 		accessorKey: 'name',
 		header: ({ column }) => <DataTableColumnHeader column={column} title="Name" />,
 		cell: (props) => {
 			const { row } = props;
-			const name = row.getValue<string>('name');
+			let name = row.getValue<string>('name');
 			const url = row.original?.url;
 			return (
 				<div className="relative flex items-center font-medium">
@@ -62,22 +65,30 @@ export const columns: ColumnDef<SubscriptionsData>[] = [
 		accessorKey: 'renewal_date',
 		header: ({ column }) => <DataTableColumnHeader column={column} title="Renewal Date" />,
 		cell: (props) => {
-			const {
-				row,
-				table: { options },
-			} = props;
-			const user = options.meta?.user;
-			const renewalDate = row.getValue<string>('renewal_date');
-			const active = row.getValue<boolean>('active');
-			const isItThisMonth = active && isThisMonth(new Date(renewalDate));
-			const formatted = renewalDate ? formatDate({ date: renewalDate, locale: user?.locale }) : '-';
-			return (
-				<div title={isItThisMonth ? 'Due this month' : ''} className={isItThisMonth ? 'font-medium text-red-500' : ''}>
-					{formatted}
-				</div>
-			);
+		const {
+			row,
+			table: { options },
+		} = props;
+		const user = options.meta?.user;
+		const renewalDate = row.getValue<string>('renewal_date');
+		const active = row.getValue<boolean>('active');
+		const today = new Date();
+		const notificationThreshold = 5;
+		const renewalDateMilliseconds = renewalDate ? new Date(renewalDate).getTime() : 0;
+		const todayMilliseconds = today.getTime();
+		const daysUntilRenewal = Math.floor((renewalDateMilliseconds - todayMilliseconds) / (24 * 60 * 60 * 1000));
+		const isNearRenewal = active && renewalDate && daysUntilRenewal <= notificationThreshold && daysUntilRenewal > 0;
+		const isWithinFiveDays = active && renewalDate && daysUntilRenewal <= 5 && daysUntilRenewal > 0;
+		const renewalApproaching = isNearRenewal ? 'Renewal approaching' : '';
+		
+		return (
+			<div title={renewalApproaching} className={isNearRenewal ? 'font-medium text-yellow-500' : ''}>
+			{renewalDate ? formatDate({ date: renewalDate, locale: user?.locale }) : '-'}
+			{isWithinFiveDays && <div className="font-medium text-yellow-500">(Renewal within 5 days)</div>}
+			</div>
+		);
 		},
-	},
+	},			 
 	{
 		accessorKey: 'date',
 		header: ({ column }) => <DataTableColumnHeader column={column} title="Start/Cancel Date" />,
