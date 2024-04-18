@@ -7,7 +7,7 @@ import './overwrites.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
-const title = 'Expense.fyi – Track your expenses with ease';
+const title = 'KharchKhabri – Track your expenses with ease';
 const description = 'Effortlessly Track and Manage Expenses.';
 
 const GOOGLE_ANALYTICS_ID = process.env.GA4_ANALYTICS_ID;
