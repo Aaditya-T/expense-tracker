@@ -86,3 +86,83 @@ html {
 		@apply bg-background text-foreground;
 	}
 }
+
+.briefClass {
+	display: flex;
+	align-items: center;
+	justify-content: center; 
+	margin: 90px 280px; /* Centers the entire section horizontally with margins */
+	background-color: #f5f5f5;
+	border-radius: 8px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	padding: 40px;
+  }
+  
+  .briefClass h2 {
+	color: #333;
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 20px;
+  }
+  
+  .briefClass p {
+	color: #666;
+	font-size: 16px;
+	line-height: 1.5;
+	max-width: 700px;
+  }
+  
+  .briefClass .introImageClass {
+	flex: 0 0 200px;
+	margin-right: 50px;
+  }
+  
+  .briefClass .introImageClass img {
+	width: 100%;
+	border-radius: 8px;
+  }
+  
+  .containerClass {
+	max-width: 800px;
+	margin: 20px auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	grid-gap: 20px;
+  }
+
+  .featureHeading{
+	text-align: center;
+	justify-content: center;
+	font-size: 30px;
+  }
+  
+  .feature {
+	background-color: #f2f2f2;
+	border: 1px solid #e0e0e0;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+	transition: all 0.2s ease-in-out; /* Enables hover effect */
+  }
+  
+  .feature:hover {
+	background-color: #e6e6e6; /* Slight background change on hover */
+	box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle hover shadow */
+  }
+  
+  .feature h2 {
+	color: #333;
+	margin-bottom: 5px; /* Add some space between title and description */
+  }
+  
+  .feature p {
+	color: #666;
+  }
+  
+  /* Add your icon styles here, targeting elements within .feature */
+  .feature i {
+	font-size: 20px;
+	margin-right: 10px;
+	color: #333;
+  }
+  
