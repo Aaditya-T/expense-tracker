@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 import { toast } from 'sonner';
 
@@ -28,6 +28,10 @@ export default function InvestmentsTable() {
 	const [selected, setSelected] = useState({});
 	const { data, loading, filter, mutate } = useData();
 	const user = useUser();
+
+	useEffect(() => {
+		console.log(data)
+	},[data])
 
 	const onDelete = useCallback(
 		async (id: string) => {
