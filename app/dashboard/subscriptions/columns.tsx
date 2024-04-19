@@ -81,7 +81,7 @@ export const columns: ColumnDef<SubscriptionsData>[] = [
 		return (
 			<div title={renewalApproaching} className={isNearRenewal ? 'font-medium text-yellow-500' : ''}>
 			{renewalDate ? formatDate({ date: renewalDate, locale: user?.locale }) : '-'}
-			{isWithinFiveDays && <div className="font-medium text-yellow-500">(Renewal within 5 days)</div>}
+			{isWithinFiveDays && <div className="font-medium text-yellow-500">(Renewal within {daysUntilRenewal} days)</div>}
 			</div>
 		);
 		},
