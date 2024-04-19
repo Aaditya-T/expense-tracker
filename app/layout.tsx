@@ -15,30 +15,15 @@ const GOOGLE_ANALYTICS_ID = process.env.GA4_ANALYTICS_ID;
 export const metadata = {
 	title,
 	description,
-	manifest: 'https://expense.fyi/manifest.json',
-	twitter: {
-		card: 'summary_large_image',
-		title,
-		description,
-		creator: '@gokul_i',
-		images: ['https://expense.fyi/og.jpg'],
-	},
-	openGraph: {
-		title,
-		description,
-		url: 'https://expense.fyi',
-		type: 'website',
-		images: ['https://expense.fyi/og.jpg'],
-	},
 	icons: {
-		icon: 'https://expense.fyi/icons/icon.svg',
-		shortcut: 'https://expense.fyi/favicon.ico',
-		apple: 'https://expense.fyi/icons/apple-icon.png',
+		icon: '/icons/icon.svg',
+		shortcut: '/icons/favicon.ico',
+		apple: '/icons/apple-icon.png',
 	},
 	appleWebApp: {
 		title,
 		statusBarStyle: 'black',
-		startupImage: ['https://expense.fyi/icons/apple-icon.png'],
+		startupImage: ['/icons/apple-icon.png'],
 	},
 };
 
@@ -55,16 +40,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 	return (
 		<html lang="en">
 			<body className={`${inter.className} flex h-full flex-col text-gray-600 antialiased`}>{children}</body>
-			<Script src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS_ID}`} strategy="afterInteractive" />
-			<Script id="ga4" strategy="afterInteractive">
-				{`
-						window.dataLayer = window.dataLayer || [];
-						function gtag(){dataLayer.push(arguments);}
-						gtag('js', new Date());
-
-						gtag('config', '${GOOGLE_ANALYTICS_ID}');
-					`}
-			</Script>
 		</html>
 	);
 }

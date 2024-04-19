@@ -32,6 +32,16 @@ const description = 'Effortlessly Track and Manage Expenses.';
 export const metadata = {
 	title,
 	description,
+	icons: {
+		icon: '/icons/icon.svg',
+		shortcut: '/icons/favicon.ico',
+		apple: '/icons/apple-icon.png',
+	},
+	appleWebApp: {
+		title,
+		statusBarStyle: 'black',
+		startupImage: ['/icons/apple-icon.png'],
+	},
 };
 
 export const revalidate = 0;
