@@ -6,7 +6,7 @@ import Plans from './plans';
 import Theme from './theme';
 import Usage from './usage';
 
-const title = 'Expense.fyi – Settings';
+const title = 'KharchKhabri – Settings';
 const description = 'Effortlessly Track and Manage Expenses.';
 
 export const metadata = {

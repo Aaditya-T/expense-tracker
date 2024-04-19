@@ -4,7 +4,7 @@ import LayoutHeader from 'components/layout/header';
 import SubscriptionsSummary from './summary';
 import SubscriptionsTable from './table';
 
-const title = 'Expense.fyi – Subscriptions';
+const title = 'KharchKhabri – Subscriptions';
 const description = 'Effortlessly Track and Manage Expenses.';
 
 export const metadata = {

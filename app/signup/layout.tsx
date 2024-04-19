@@ -1,4 +1,4 @@
-const title = 'Sign up for Expense.fyi';
+const title = 'Sign up for KharchKhabri';
 const description = 'Effortlessly Track and Manage Expenses.';
 
 export const metadata = {

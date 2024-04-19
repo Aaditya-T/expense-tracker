@@ -63,9 +63,8 @@ export default function Home() {
 
         Sign up now to start managing your money smarter!</p>
     </div>
-    <div className="introImageClass">
-      <img src="public\demo\expenses.jpg" alt="Logo Image" className="logo"></img>
-    </div>
+		{/* use tailwind to format image */}
+      <img src="/demo/overview.jpg" alt="Logo Image" className=" w-[350px] rounded-xl ml-5" />
   </div>
 
   <b><h2 className="featureHeading">Features</h2></b><br />
