@@ -199,6 +199,23 @@ export default function AddInvestments({ show, onHide, mutate, selected, lookup 
 								})}
 							</select>
 						</div>
+						<div className="mr-3">
+							<Label htmlFor="category">Recuring</Label>
+							<select
+								id="category"
+								className="mt-1.5 flex h-9 max-sm:h-10 w-full rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+								onChange={(event) => {
+									setState({ ...state, category: event.target.value });
+								}}
+								value={state.category}
+								required
+							>
+									return (
+										<option value="yes">Yes</option>
+    									<option value="no">No</option>
+									);
+							</select>
+						</div>
 					</div>
 					<div>
 						<Label className="mt-1 block">
