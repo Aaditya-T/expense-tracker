@@ -34,17 +34,17 @@ export async function GET(request: NextRequest) {
 			const data = await prisma.investments.findMany({
 				where,
 				orderBy: { updated_at: 'desc' },
-				select: {
-					notes: true,
-					name: true,
-					price: true,
-					units: true,
-					category: true,
-					id: true,
-					date: true,
-					created_at: true,
-					updated_at: true,
-				},
+				// select: {
+				// 	notes: true,
+				// 	name: true,
+				// 	price: true,
+				// 	units: true,
+				// 	category: true,
+				// 	id: true,
+				// 	date: true,
+				// 	created_at: true,
+				// 	updated_at: true,
+				// },
 			});
 			return NextResponse.json(data.sort((a, b) => Date.parse(b.date) - Date.parse(a.date)));
 		} catch (error) {

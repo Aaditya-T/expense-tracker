@@ -85,6 +85,7 @@ model investments {
   updated_at DateTime @default(now()) @updatedAt @db.Timestamptz(6)
   user_id    String   @db.Uuid
   nameHash   String?
+  recurring  Boolean  @default(false)
   user       users    @relation(fields: [user_id], references: [id], onDelete: Cascade)
 }
 
