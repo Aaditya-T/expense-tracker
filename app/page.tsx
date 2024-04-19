@@ -65,7 +65,7 @@ export default function Home() {
 						</p>
 					</div>
 					{/* use tailwind to format image */}
-					<img src="/demo/overview.jpg" alt="Logo Image" className=" w-[350px] rounded-xl ml-5" />
+					<img src="/demo/dem.png" alt="Logo Image" className=" w-[350px] rounded-xl ml-5" />
 				</div>
 
 				<b>
