@@ -64,7 +64,7 @@ export default function Home() {
         Sign up now to start managing your money smarter!</p>
     </div>
     <div className="introImageClass">
-      <img src="public\demo\overview.jpg" alt="Logo Image" className="logo"></img>
+      <img src="public\demo\expenses.jpg" alt="Logo Image" className="logo"></img>
     </div>
   </div>
 

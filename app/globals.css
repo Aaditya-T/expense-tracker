@@ -91,11 +91,11 @@ html {
 	display: flex;
 	align-items: center;
 	justify-content: center; 
-	margin: 90px 280px; /* Centers the entire section horizontally with margins */
+	margin: 90px 150px; /* Centers the entire section horizontally with margins */
 	background-color: #f5f5f5;
 	border-radius: 8px;
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-	padding: 40px;
+	padding: 100px;
   }
   
   .briefClass h2 {
