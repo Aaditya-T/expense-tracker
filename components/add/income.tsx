@@ -19,7 +19,7 @@ import { Textarea } from 'components/ui/textarea';
 
 import { getCurrencySymbol } from 'lib/formatter';
 
-import { incomeCategory } from 'constants/categories';
+import { incomeCategory, incomeCategory2 } from 'constants/categories';
 import { dateFormat, datePattern } from 'constants/date';
 import messages from 'constants/messages';
 
@@ -33,6 +33,7 @@ interface AddIncome {
 
 const initialState = {
 	category: '',
+	category2: '',
 	date: '',
 	name: '',
 	notes: '',
@@ -163,7 +164,7 @@ export default function AddIncome({ show, onHide, mutate, selected, lookup }: Ad
 							/>
 						</div>
 						<div className="mr-3">
-							<Label htmlFor="category">Category</Label>
+							<Label htmlFor="category">Source</Label>
 							<select
 								id="category"
 								className="mt-1.5 flex h-9 max-sm:h-10 w-full rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
@@ -177,6 +178,26 @@ export default function AddIncome({ show, onHide, mutate, selected, lookup }: Ad
 									return (
 										<option key={categoryKey} value={categoryKey}>
 											{incomeCategory[categoryKey]}
+										</option>
+									);
+								})}
+							</select>
+						</div>
+						<div className="mr-3">
+							<Label htmlFor="category">Category</Label>
+							<select
+								id="category"
+								className="mt-1.5 flex h-9 max-sm:h-10 w-full rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+								onChange={(event) => {
+									setState({ ...state, category2: event.target.value });
+								}}
+								value={state.category2}
+								required
+							>
+								{Object.keys(incomeCategory2).map((categoryKey) => {
+									return (
+										<option key={categoryKey} value={categoryKey}>
+											{incomeCategory2[categoryKey]}
 										</option>
 									);
 								})}

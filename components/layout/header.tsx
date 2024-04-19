@@ -42,7 +42,7 @@ export default function LayoutHeader({ title, showDatePicker = false }: { title:
 							showDatePicker ? 'mb-2 sm:mb-0' : ''
 						}`}
 					>
-						{title}
+						{title.toLowerCase() === "subscriptions" ? "Recurrings" : title}
 					</h2>
 				</div>
 				<div className="flex items-center justify-between sm:mt-0">

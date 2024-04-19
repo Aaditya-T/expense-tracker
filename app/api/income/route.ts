@@ -34,16 +34,16 @@ export async function GET(request: NextRequest) {
 			const data = await prisma.income.findMany({
 				where,
 				orderBy: { updated_at: 'desc' },
-				select: {
-					notes: true,
-					name: true,
-					price: true,
-					category: true,
-					id: true,
-					date: true,
-					created_at: true,
-					updated_at: true,
-				},
+				// select: {
+				// 	notes: true,
+				// 	name: true,
+				// 	price: true,
+				// 	category: true,
+				// 	id: true,
+				// 	date: true,
+				// 	created_at: true,
+				// 	updated_at: true,
+				// },
 			});
 			return NextResponse.json(data.sort((a, b) => Date.parse(b.date) - Date.parse(a.date)));
 		} catch (error) {
@@ -70,7 +70,7 @@ export async function DELETE(request: NextRequest) {
 }
 
 export async function PUT(request: NextRequest) {
-	const { notes, name, price, category, id, date } = await request.json();
+	const { notes, name, price, category, id, date, category2 } = await request.json();
 
 	return await checkAuth(async () => {
 		if (!id) {
@@ -78,7 +78,7 @@ export async function PUT(request: NextRequest) {
 		}
 		try {
 			await prisma.income.update({
-				data: { notes, name, price, date, category },
+				data: { notes, name, price, date, category, category2 },
 				where: { id },
 			});
 			return NextResponse.json('updated', { status: 200 });

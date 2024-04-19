@@ -8,13 +8,14 @@ import { Button } from 'components/ui/button';
 
 import { formatCurrency, formatDate } from 'lib/formatter';
 
-import { incomeCategory } from 'constants/categories';
+import { incomeCategory, incomeCategory2 } from 'constants/categories';
 
 export type Income = {
 	name: string;
 	date: string;
 	price: string;
 	category: string;
+	category2: string;
 	paid_via: string;
 	notes: string;
 	created_at: string;
@@ -63,7 +64,7 @@ export const columns: ColumnDef<Income>[] = [
 	},
 	{
 		accessorKey: 'category',
-		header: ({ column }) => <DataTableColumnHeader column={column} title="Category" />,
+		header: ({ column }) => <DataTableColumnHeader column={column} title="Source" />,
 		cell: ({ row }) => {
 			const category = row.getValue<string>('category');
 			return <div className="">{incomeCategory[category]}</div>;
@@ -72,7 +73,17 @@ export const columns: ColumnDef<Income>[] = [
 			return value.includes(row.getValue(id));
 		},
 	},
-
+	{
+		accessorKey: 'category2',
+		header: ({ column }) => <DataTableColumnHeader column={column} title="Category" />,
+		cell: ({ row }) => {
+			const category = row.getValue<string>('category2');
+			return <div className="">{incomeCategory2[category]}</div>;
+		},
+		filterFn: (row, id, value) => {
+			return value.includes(row.getValue(id));
+		},
+	},
 	{ accessorKey: 'notes', header: 'Notes' },
 	{
 		accessorKey: 'actions',

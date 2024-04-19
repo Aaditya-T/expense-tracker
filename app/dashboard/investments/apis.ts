@@ -7,6 +7,7 @@ export type InvestmentData = {
 	category: string;
 	units: number;
 	date: string;
+	recurring: boolean;
 };
 
 export const addInvestment = async (data: InvestmentData) => {

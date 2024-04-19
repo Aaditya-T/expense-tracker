@@ -104,6 +104,13 @@ export const incomeCategory: Income = {
 	salary: 'Salary',
 	youtube: 'Youtube',
 };
+export const incomeCategory2: Income = {
+	'': 'Select',
+	cash: 'Cash',
+	bank: 'Bank',
+	cashless: 'Cashless (other)',
+	cashother: 'Cash (other)',
+};
 
 interface Investments {
 	[key: string]: string;
@@ -116,6 +123,7 @@ export const investmentCategory: Investments = {
 	mutualfunds: 'Mutual Funds',
 	other: 'Other',
 	usstock: 'US Stock',
+	sip: 'SIP',
 };
 
 interface Subscriptions {

@@ -21,6 +21,7 @@ export type Investments = {
 	updated_at: string;
 	id: string;
 	actions: string;
+	recurring: boolean;
 };
 
 export const columns: ColumnDef<Investments>[] = [

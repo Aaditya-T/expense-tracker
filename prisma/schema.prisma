@@ -61,6 +61,7 @@ model income {
   /// @encrypted
   price      String   @default("0")
   category   String
+  category2  String
   date       String
   created_at DateTime @default(now()) @db.Timestamptz(6)
   updated_at DateTime @default(now()) @updatedAt @db.Timestamptz(6)
