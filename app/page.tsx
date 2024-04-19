@@ -94,7 +94,7 @@ export default function Home() {
 					</div>
 					<div className="feature">
 						<h2>Stock Market Budgeting</h2>
-						<p>Allow users to syet budgets for different stock market activities.</p>
+						<p>Allow users to set budgets for different stock market activities.</p>
 					</div>
 					<div className="feature">
 						<h2>Expense Visualization</h2>
