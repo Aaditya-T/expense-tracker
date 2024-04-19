@@ -35,7 +35,7 @@ export const emails = {
 		deleted: 'Your Expense.fyi account is Deleted!',
 	},
 	welcome: {
-		subject: '✨ Welcome to Expense.fyi',
+		subject: '✨ Welcome to Kharch Khabari',
 	},
 	usageLimit: {
 		premiumExpired: {
@@ -52,9 +52,9 @@ export const emails = {
 		},
 	},
 	sent: 'We just sent an email with magic link, check your inbox.',
-	from: 'Gokul from Expense.fyi <hello@coreumpulse.com>',
-	signin: { subject: 'Sign in link for Expense.fyi' },
-	signup: { subject: 'Sign up link for Expense.fyi' },
+	from: 'Welcome to kharch khabri <hello@coreumpulse.com>',
+	signin: { subject: 'Sign in link for Kharch Khabri' },
+	signup: { subject: 'Sign up link for Kharch Khabri' },
 };
 
 export default messages;

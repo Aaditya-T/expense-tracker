@@ -28,18 +28,17 @@ export default function WelcomeEmail() {
 		<Html>
 			<Tailwind>
 				<Head />
-				<Preview>Welcome to Expense.fyi</Preview>
+				<Preview>Welcome to Kharch-Khabari</Preview>
 				<Body className="bg-white my-auto mx-auto font-sans">
 					<Container className="border border-solid border-[#eaeaea] rounded my-[40px] mx-auto p-[20px] w-[465px]">
 						<Section className="mt-[22px]">
 							<Img src={`${baseUrl}/icons/logo.png`} width="50" height="50" alt="Logo" className="block m-auto" />
 						</Section>
 						<Heading className="text-black text-[24px] font-normal text-center p-0 mb-[24px] mt-[12px] mx-0">
-							Welcome to Expense.fyi
+							Welcome to Kharch-Khabari!
 						</Heading>
 						<Text className="text-black text-[14px] leading-[24px]">
-							Hi, I{"'"}m Gokul, creator of the Expense.fyi, an open-source app to deliver financial clarity through
-							spending analysis. We are excited to have you on board.
+							Click the magick link to signin/up into your account!
 						</Text>
 						<Text className="text-black text-[14px] leading-[24px]">Here is how you can get started:</Text>
 
@@ -48,7 +47,7 @@ export default function WelcomeEmail() {
 							<Link href={demoVideoUrl} target="_blank" className="underline">
 								demo video
 							</Link>{' '}
-							to know how its done in Expense.fyi.
+							to know how its done in Kharch Khabri.
 						</Text>
 						<Text className="m-1">
 							2. Star our{' '}

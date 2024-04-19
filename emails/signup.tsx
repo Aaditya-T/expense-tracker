@@ -25,7 +25,7 @@ export const SignUpEmail = ({ action_link = '' }: { action_link?: string }) => {
 		<Html>
 			<Tailwind>
 				<Head />
-				<Preview>Sign up link to Expense.fyi</Preview>
+				<Preview>Sign up link to Kharch Khabri</Preview>
 				<Body className="bg-white my-auto mx-auto font-sans">
 					<Container className="border border-solid border-[#eaeaea] rounded my-[40px] mx-auto p-[20px] w-[465px]">
 						<Section className="mt-[22px]">

@@ -15,9 +15,6 @@ import { formatCurrency, formatDate } from 'lib/formatter';
 import { SubscriptionsData } from './apis';
 
 export const columns: ColumnDef<SubscriptionsData>[] = [
-
-
-
 	{
 		accessorKey: 'name',
 		header: ({ column }) => <DataTableColumnHeader column={column} title="Name" />,
